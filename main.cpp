@@ -2,22 +2,27 @@
 
 using namespace std;
 
-void square(int num);
+void power(int base, int exponent);
 
 int main()
 {
     cout<<"GitHub Test"<<endl;
     
-    square(1);
-    square(5);
-    square(10);
-    square(0);
-    square(-10);
+    power(1, 19);
+    power(5, 3);
+    power(10, 2);
+    power(0, 0);
+    power(-10, 3);
 
     return 0;
 }
 //--
-void square(int num)
+void power(int base, int exponent)
 {
-    cout<<(num * num)<<endl;
+    int result = 1;
+    for(int i = 0;i < exponent;i++)
+    {
+        result = result * base;
+    }
+    cout<<result<<endl;
 }
